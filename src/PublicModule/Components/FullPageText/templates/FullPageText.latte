@@ -1,0 +1,16 @@
+{*
+ * @var $article
+ *}
+{block content}
+<div n:class="container, full-page-text, (isset($params['margin_top']) && ($params['margin_top'] == '' or $params['margin_top'] == 0)) ? no-margin-top, (isset($params['margin_bottom']) && ($params['margin_bottom'] == '' or $params['margin_bottom'] == 0)) ? no-margin-bottom">
+	<div class="row" style="background-color: #{$text->getBgColor()};">
+		<div class="col-lg-12">
+			<div class="content">
+				{$text->getContent()|noescape}
+			</div>
+		</div>
+		<div n:if="!empty($text->getLink()) && !empty($text->getLinkText())" class="col-lg-12 text-center">
+			<a class="btn btn-bordered btn-transparent btn-white" href="{$text->getLink()}">{$text->getLinkText()}</a>
+		</div>
+	</div>
+</div>

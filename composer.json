@@ -1,0 +1,28 @@
+{
+	"name": "wundermanpraha/cms-fullpagetext",
+	"type": "library",
+	"description": "",
+	"license": "GNU GPL v3",
+	"support": {
+		"issues": "https://github.com/wundermanpraha/cms-fullpagetext/issues"
+	},
+	"authors": [
+		{
+			"name": "Petr Besir Horáček",
+			"email": "sirbesir@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Wunderman\\CMS\\FullPageText\\": "src/"
+		}
+	},
+	"require": {
+		"nette/di" : "^2.3",
+		"nette/application" : "^2.3"
+	},
+	"minimum-stability": "dev",
+	"require-dev": {
+		"codeception/codeception": "^2.1"
+	}
+}

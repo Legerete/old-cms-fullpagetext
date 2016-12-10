@@ -1,0 +1,20 @@
+parameters:
+	PrivateModule:
+		AddButtons:
+			fullPageText:
+				text: 'Add full page text'
+				tooltip: ''
+	renderableComponents:
+		fullPageText:
+
+services:
+	privateModuleService:
+	 	class: Wunderman\CMS\FullPageText\PrivateModule\Service\FullPageTextService
+
+	publicFullPageTextFactory:
+		class: Wunderman\CMS\FullPageText\PublicModule\Components\FullPageText\FullPageText
+		implement: Wunderman\CMS\FullPageText\PublicModule\Components\FullPageText\IFullPageTextFactory
+
+	privateFullPageTextFactory:
+		class: Wunderman\CMS\FullPageText\PrivateModule\Components\FullPageText\FullPageText
+		implement: Wunderman\CMS\FullPageText\PrivateModule\Components\FullPageText\IFullPageTextFactory
